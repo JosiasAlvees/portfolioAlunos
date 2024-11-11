@@ -1,13 +1,11 @@
-# **Victor Queiroz Bazarim** - Website de Portfólio
+# **Josias Alves Pereira** - Website de Portfólio
 
-Este projeto é um **site de portfólio pessoal** desenvolvido para apresentar minhas habilidades, projetos e conquistas na área de **TECNOLOGIA**. O site foi projetado com um layout moderno e responsivo, permitindo que os visitantes explorem minha trajetória e trabalhos em diferentes dispositivos.
+Este projeto é um **site de portfólio pessoal** desenvolvido para ensinar aos meus alunos de informática como modificar e personalizar tags HTML e CSS. Através deste portfólio, os alunos podem experimentar e entender a estrutura e o design de um site, aplicando o que aprenderam em aula..
 
-## **PRINCIPAIS FUNCIONALIDADES:**
+## **OBJETIVO PEDAGÓGICO:**
 
 - **Seção Home**: Uma breve introdução sobre quem eu sou, destacando minha **paixão por tecnologia** e áreas de foco atuais.
-- **Seção Serviços**: Visão geral dos **serviços que ofereço**, como **desenvolvimento web**, além da exibição de **meus certificados**.
-- **Seção Portfólio**: Apresenta meus **projetos mais recentes**, com links para mais detalhes sobre cada um.
-- **Seção Sobre**: Um olhar mais profundo sobre minha **experiência em administração** e meus **objetivos atuais** em dados e desenvolvimento web.
+- **Seção Sobre**: Explicação sobre o propósito do portfólio, focando em ensinar e incentivar a prática de desenvolvimento web.
 - **DESIGN RESPONSIVO**: O site é **totalmente responsivo**, garantindo uma ótima experiência em qualquer dispositivo, desde smartphones até desktops.
 
 ## **TECNOLOGIAS UTILIZADAS:**
@@ -17,4 +15,4 @@ Este projeto é um **site de portfólio pessoal** desenvolvido para apresentar m
 - **BoxIcons** para ícones interativos e modernos
 - **Google Fonts** para personalização tipográfica (Fonte Poppins)
 
-Este portfólio reflete meu crescimento na área de **tecnologia**, meus **certificados** e os **projetos que concluí**. Ele é um documento **vivo**, que evolui à medida que adquiro mais conhecimentos e enfrento novos desafios.
+Este portfólio serve como um recurso prático para meus alunos, permitindo que desenvolvam suas habilidades em web design e ganhem confiança em modificar e aprimorar um site real.
