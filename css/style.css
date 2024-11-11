@@ -1,0 +1,852 @@
+
+/*imports the Poppins font from google fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Faculty+Glyphic&family=Teko:wght@300..700&display=swap');
+
+:root {
+--main-color: #00eeff;
+--text-color: #ffffff;
+--bg-color-01: #1f242d;
+--bg-color-02: #000000;
+--color-00: #0000001a;
+
+/*Extra*/
+
+--color-01: #999999;
+--color-02: #009539;
+--color-03: #7950f2;
+--color-04: #c00000;
+--color-05:#232323;
+
+
+}
+
+
+*{ 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+
+html { font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg-color-01);
+  color: var(--text-color);
+
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.1rem;
+  background-color: var(--bg-color-01);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+
+  /*border: solid 1px var(--color-02); */
+}
+/*Alterando cor do mue nome*/
+.josias{
+  color: var(--main-color);
+  font-family: "Edu AU VIC WA NT Pre", cursive;
+}
+.logo {
+font-size: 1.7rem;
+color: var(--text-color);
+font-weight: 600;
+cursor: default;
+}
+.project-details {
+  padding-top: 8rem; /* Adiciona mais espaço no topo para evitar que o título seja cortado */
+  margin-top: 2rem;  /* Adiciona margem extra no topo */
+}
+
+.nav-responsive {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--bg-color-01);
+}
+
+.nav a, .nav-responsive a {
+font-size: 1.2rem;
+color: var(--text-color);
+padding: 0.5rem 1rem;
+transition: 0.4s;
+
+/*border: solid 1px var(--color-02); */
+
+}
+.nav a:hover, .nav-responsive a:hover {
+  color: var(--main-color);
+  border-bottom: 2px solid  var(--main-color);
+  transition: color 0.3s ease, border-bottom 0.3s ease; 
+}
+
+section {
+  min-height: 100vh;
+padding: 6rem 6rem 2rem;
+
+/*border: solid 1px var(--color-02); */
+ /*teste*/
+}
+span {
+  color: var(--main-color);
+
+}
+.home, .about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.home-img {
+border-right: solid 0.6rem;
+border-bottom: solid 0.6rem;
+border-image: linear-gradient(135deg, transparent 50%, var(--main-color)) 1;
+
+}
+
+.about-img {
+  border-left: solid 0.6rem ;
+  border-bottom: solid 0.6rem;
+  border-image: linear-gradient(225deg, transparent 50%, var(--main-color)) 2;
+  
+  }
+
+.home-img img, .about-img img {
+  width: 100%;
+}
+
+.about {
+  background-color: var(--bg-color-01);
+}
+
+.home-content, .about-content {
+  width: 45%;
+}
+.home-content h1, .about-content h1{
+  font-weight: 700;
+  line-height: 1.3;
+
+
+  /*font-size: 2.7rem; *//*teste*/;
+}
+
+.home-content h3, .about-content h3{
+  font-weight: 700;
+  font-size: 1.6rem;
+
+}
+ 
+.home-content p, .about-content p {
+  margin-top: 1.2rem;
+  text-align: justify;
+}
+
+
+form textarea {
+  resize: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+  background-color: var(--bg-color-01);
+}
+
+.social-media img {
+  width: 3.5rem;
+}
+
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: transparent;
+  border: solid 0.15rem var(--main-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--main-color);
+  margin: 1.8rem 0.5rem;
+  transition: 0.5s ease;
+}
+
+.social-media a:hover {
+  background-color: var(--main-color);
+  color: var(--bg-color-02);
+  box-shadow: 0 0 0.3rem var(--main-color);
+}
+
+
+
+/*====== button =====*/
+.btn {
+  display: inline-block;
+  padding:  0.7rem 1.8rem;
+  background-color: var(--main-color);
+  border-radius: 2rem;
+  color: var(--bg-color-02);
+  font-weight: 600;
+  letter-spacing: 0.1;
+  transition: 0.3s ease;
+  margin-top: 1.2rem;
+}
+.btn:hover {
+  box-shadow: 0 0 0.3rem var(--main-color);
+  background-color: inherit;
+  color: var(--main-color);
+  cursor: pointer;
+}
+/*====== /button =====*/
+
+/*====== menu hamburguer=====*/
+
+.menu-hamburguer {
+  display: none;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 2rem;
+  height: 0.3rem;
+  background-color: var(--text-color);
+  margin: 0.4rem 0;
+  transition: 0.3s ease;
+}
+
+.change .bar1 {
+  transform: translate(0, 0.65rem) rotate(-45deg);
+}
+.change .bar2 {
+opacity: 0;
+  }
+
+  .change .bar3 {
+transform: translate(0, -0.65rem) rotate(45deg);     
+}
+
+.nav-visible {
+  display: block; /* Exibe o menu quando o hambúrguer é clicado */
+}
+
+
+/*====== //menu hamburguer=====*/
+
+/*====== media queries=====*/
+
+@media (min-width: 0px) {
+  .menu-hamburguer{
+    display:block
+  }
+  .nav {
+    display: none;
+  }
+
+  .nav-responsive a {
+    display:block;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+}
+section {
+  padding: 6rem 2.5rem;
+}
+.home, .about {
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.home-img, .about-img {
+  width: 80%;
+  max-width: 80%;
+}
+.home-content, .about-content{
+  width: 100%;
+}
+
+.home-content div{
+  text-align: center;
+}
+
+.home-content h1, .about-content h1 {
+  font-size:  2.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.services-container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-box {
+  width: 100%;
+}
+
+
+
+/*small smart*/
+
+@media (min-width: 576px) {
+
+.home-img, .about-img{
+  width: 65%;
+  max-width: 65%;
+}
+
+.services-box {
+  width: 70%;
+}
+
+}
+
+@media (min-width: 768px) {
+.menu-hamburguer {
+  display: none;
+}
+
+.nav{
+  display: block;
+}
+.nav-responsive, .nav-responsive a {
+display: none;
+
+}
+
+.home, .about {
+  flex-direction: row;
+ justify-content: space-evenly;
+}
+
+.home-img, .about-img {
+  max-width: 35%;
+}
+
+.home-content, .about-content{
+  width: 50%;
+}
+
+.services-box {
+  width: 60%;
+  margin-bottom: 2rem;
+}
+
+.portfolio-container {
+  grid-template-columns: auto auto auto;
+}
+
+form .input-box input {
+  width: 49%;
+}
+
+}
+
+@media (min-width: 992px) {
+
+  }
+
+  .services-container {
+    flex-direction: row;
+    gap: 1.2rem;
+  }
+
+  @media (min-width: 1200px) {
+    .home-img, .about-img{
+      max-width: 25%;
+    }
+    
+    .home-content h1 {
+      font-size: 2.7rem;
+
+    }
+.home-content h3 {
+  font-size: 2rem;
+}
+
+.portfolio-container {
+  grid-template-columns: auto auto auto;
+}
+
+}
+
+
+/*====== /media queries=====*/
+
+@media (max-width: 576px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .home-content h1, .about-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .home-content p, .about-content p {
+    font-size: 1rem;
+    margin: 0.5rem;
+  }
+
+  section {
+    padding: 4rem 1rem;  /* Reduz o padding lateral */
+  }
+
+  .services-container {
+    gap: 0.5rem;
+  }
+
+  .services-box {
+    padding: 1.5rem;
+    width: 90%;
+  }
+
+  .portfolio-container {
+    grid-template-columns: 1fr;  /* Ajusta para uma coluna em telas pequenas */
+  }
+
+  .home-img, .about-img {
+    max-width: 100%;  /* Imagens responsivas para caber melhor em telas pequenas */
+  }
+
+  .menu-hamburguer {
+    width: 30px; /* Reduz o tamanho do menu em telas pequenas */
+    height: 25px;
+  }
+
+  .nav-responsive a {
+    font-size: 1rem;
+    padding: 0.5rem; /* Ajusta o tamanho do menu */
+  }
+}
+
+@media (max-width: 576px) {
+  .pdf-item embed {
+    width: 100%;  /* Ajusta a largura do PDF para 100% da tela */
+    height: auto; /* Mantém a proporção da altura */
+  }
+
+  .pdf-item h3 {
+    font-size: 1.2rem;  /* Ajusta o tamanho dos títulos dos certificados */
+  }
+
+  .pdf-item .btn {
+    font-size: 0.9rem;  /* Ajusta o tamanho do botão de download */
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-container {
+    flex-direction: column;  /* Empilha as caixas de serviços em vez de deixá-las lado a lado */
+    align-items: center;     /* Centraliza as caixas */
+    gap: 1rem;               /* Adiciona um espaçamento entre as caixas */
+  }
+
+  .services-box {
+    width: 90%;              /* Ajusta a largura para 90% da tela */
+    padding: 1.5rem;         /* Reduz o padding interno das caixas */
+  }
+
+  .services-box h3 {
+    font-size: 1.2rem;       /* Reduz o tamanho da fonte para os títulos */
+  }
+
+  .services-box p {
+    font-size: 0.9rem;       /* Reduz o tamanho da fonte para o texto */
+  }
+
+  .services-box i {
+    font-size: 3rem;         /* Diminui o ícone para se ajustar melhor ao espaço */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Ajustes gerais */
+  
+  body {
+    font-size: 1rem; /* Tamanho de fonte ligeiramente maior */
+    
+  }
+
+  .home-content h1, .about-content h1 {
+    font-size: 2.5rem; /* Ajusta o tamanho das fontes principais */
+  }
+
+  .home-content p, .about-content p {
+    font-size: 1.1rem;
+  }
+
+  /* Ajustes para a seção "Our Services" */
+  .services-container {
+    flex-direction: row; /* Mantém as caixas lado a lado */
+    justify-content: space-around; /* Espaçamento entre as caixas */
+  }
+
+  .services-box {
+    width: 45%; /* Caixas ficam lado a lado com uma largura maior em tablets */
+    padding: 2rem; /* Mais espaço interno nas caixas */
+  }
+
+  .services-box h3 {
+    font-size: 1.4rem;
+  }
+
+  .services-box p {
+    font-size: 1rem;
+  }
+
+  .services-box i {
+    font-size: 3.5rem; /* Ícones ligeiramente menores */
+  }
+
+  /* PDFs ajustados */
+  .pdf-item embed {
+    width: 90%; /* PDFs ocupam 90% da tela em tablets */
+    height: 600px; /* Ajusta a altura dos PDFs */
+  }
+
+  .pdf-item h3 {
+    font-size: 1.5rem; /* Ajusta o título dos PDFs */
+  }
+
+  .pdf-item .btn {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem; /* Botões maiores */
+  }
+}
+
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  /* Ajustes gerais */
+  body {
+    font-size: 1.1rem;
+  }
+
+  .home-content h1, .about-content h1 {
+    font-size: 2.7rem;
+  }
+
+  .home-content p, .about-content p {
+    font-size: 1.2rem;
+  }
+
+  /* Ajustes para a seção "Our Services" */
+  .services-container {
+    flex-direction: row; /* Caixas lado a lado */
+    justify-content: space-evenly; /* Espaçamento maior entre as caixas */
+  }
+
+  .services-box {
+    width: 40%; /* Caixas mais largas em notebooks */
+    padding: 2.5rem; /* Mais espaço nas caixas */
+  }
+
+  .services-box h3 {
+    font-size: 1.6rem;
+  }
+
+  .services-box p {
+    font-size: 1.1rem;
+  }
+
+  .services-box i {
+    font-size: 4rem; /* Ícones maiores */
+  }
+
+  /* PDFs ajustados */
+  .pdf-item embed {
+    width: 80%; /* PDFs ocupam 80% da tela em notebooks */
+    height: 650px; /* Altura ajustada */
+  }
+
+  .pdf-item h3 {
+    font-size: 1.6rem;
+  }
+
+  .pdf-item .btn {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.8rem; /* Botões maiores */
+  }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 576px) {
+  .pdf-item iframe {
+    width: 100%;
+    height: 600px;  /* Aumentado para uma melhor visualização */
+  }
+}
+
+
+  .pdf-item h3 {
+    font-size: 1.2rem;  /* Reduz o tamanho do título dos certificados */
+  }
+
+  .pdf-item .btn {
+    font-size: 0.9rem;  /* Ajusta o tamanho do botão de download */
+    padding: 0.5rem 1rem;
+  }
+
+  .pdf-item img {
+    width: 100%;   /* As imagens vão ocupar toda a largura do contêiner */
+    height: auto;  /* A altura será ajustada automaticamente para manter a proporção */
+    border: 1px solid #ddd; /* (Opcional) Adiciona uma borda leve ao redor da imagem */
+    border-radius: 5px; /* (Opcional) Bordas arredondadas para um visual mais elegante */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* (Opcional) Sombras leves para destaque */
+  }
+  
+
+/* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .pdf-item iframe {
+    width: 90%;  /* O iframe vai ocupar 90% da tela em tablets */
+    height: 500px;  /* Altura ajustada para tablets */
+  }
+
+  .pdf-item h3 {
+    font-size: 1.4rem;  /* Ajuste o tamanho do título dos certificados */
+  }
+
+  .pdf-item .btn {
+    font-size: 1rem;  /* Ajuste o tamanho do botão de download */
+    padding: 0.7rem 1.5rem;
+  }
+}
+
+/* Estilos para notebooks */
+@media (min-width: 992px) {
+  .pdf-item iframe {
+    width: 80%;  /* O iframe vai ocupar 80% da tela em notebooks */
+    height: 600px;  /* Altura ajustada para notebooks */
+  }
+
+  .pdf-item h3 {
+    font-size: 1.6rem;  /* Ajuste o tamanho do título dos certificados */
+  }
+
+  .pdf-item .btn {
+    font-size: 1.1rem;  /* Ajuste o tamanho do botão de download */
+    padding: 0.8rem 1.8rem;
+  }
+}
+
+/* Ajuste padrão para telas grandes (desktops) */
+.pdf-item img {
+  width: 50%;  /* As imagens ocuparão 50% da largura no desktop */
+  height: auto; /* Mantém a proporção correta */
+  max-width: 600px; /* Limita o tamanho máximo */
+  margin: 0 auto; /* Centraliza a imagem */
+}
+
+/* Ajuste para tablets (entre 768px e 1024px) */
+@media (max-width: 1024px) {
+  .pdf-item img {
+    width: 70%;  /* As imagens ocuparão 70% da largura no tablet */
+    height: auto;
+  }
+}
+
+/* Ajuste para celulares (até 768px) */
+@media (max-width: 768px) {
+  .pdf-item img {
+    width: 90%;  /* As imagens ocuparão 90% da largura no celular */
+    height: auto;
+  }
+}
+
+/* Efeito de zoom ao passar o mouse (somente em telas maiores) */
+@media (min-width: 768px) {
+  .pdf-item img {
+    transition: transform 0.3s ease; /* Suaviza a transição de zoom */
+  }
+
+  .pdf-item img:hover {
+    transform: scale(1.2); /* Aumenta a imagem em 20% ao passar o mouse */
+    cursor: zoom-in;
+  }
+}
+
+/* Zoom interativo ao clicar (somente em telas maiores) */
+@media (min-width: 768px) {
+  .pdf-item img.zoomed {
+    transform: scale(2); /* Aumenta o tamanho da imagem em 200% ao clicar */
+    cursor: zoom-out; /* Cursor muda para "zoom-out" */
+    position: relative;
+    z-index: 1000;
+  }
+}
+.project-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.pdf-item {
+  margin-top: 20px;
+}
+
+.project-overview img {
+  width: 100%; /* Ou ajuste para a largura desejada */
+  max-width: 600px; /* Define um tamanho máximo */
+  height: auto; /* Mantém a proporção correta */
+  float: left; /* Coloca a imagem no canto esquerdo */
+  display: block;
+}
+/* Estilos globais */
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos da imagem na seção de projeto */
+.project-overview img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  float: left;
+  display: block;
+  margin-bottom: 1rem; /* Espaço abaixo da imagem */
+}
+
+/* Estilos para o botão */
+.project-overview .btn {
+  display: inline-block;
+  padding: 0.7rem 1.8rem;
+  background-color: var(--main-color);
+  border-radius: 2rem;
+  color: var(--bg-color-02);
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  transition: 0.3s ease;
+  clear: both; /* Garante que o botão fique abaixo da imagem */
+  margin-top: 1rem; /* Espaço acima do botão */
+  text-align: center;
+  width: auto; /* Ajuste automático do tamanho */
+  max-width: 150px; /* Limita a largura máxima */
+}
+
+.project-overview .btn:hover {
+  box-shadow: 0 0 0.3rem var(--main-color);
+  background-color: inherit;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+/* Estilos para o vídeo */
+.project-overview video {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 576px) {
+  .project-overview img {
+    max-width: 100%;
+  }
+
+  .project-overview video {
+    max-width: 100%;
+  }
+
+  .project-overview .btn {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Responsividade para tablets */
+@media (min-width: 577px) and (max-width: 1024px) {
+  .project-overview img {
+    max-width: 80%;
+  }
+
+  .project-overview video {
+    max-width: 90%;
+  }
+
+  .project-overview .btn {
+    max-width: 150px;
+  }
+}
+
+/* Ajuste no logo e header para telas pequenas */
+@media (max-width: 576px) {
+  .logo {
+    font-size: 1.4rem; /* Diminui o tamanho da fonte do nome Victor Bazarim */
+    white-space: nowrap; /* Evita quebra de linha no nome */
+  }
+
+  header {
+    padding: 0.8rem; /* Diminui o espaçamento em torno do logo */
+  }
+
+  .home-content h1 {
+    font-size: 2rem; /* Ajusta o tamanho do título */
+    padding: 0 10px; /* Adiciona espaçamento lateral */
+    text-align: center; /* Centraliza o texto */
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  max-width: 100%;
+  overflow-x: hidden; /* Isso evita a rolagem lateral */
+}
+
+.dashboard-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Mantém a proporção 16:9 */
+  height: 0;
+  overflow: hidden;
+  background-color: #000; /* Coloca uma cor de fundo preta para o dashboard */
+  margin: 0 auto; /* Centraliza o dashboard */
+}
+
+.dashboard-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* Remove a borda */
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+      padding-bottom: 75%; /* Proporção ajustada para dispositivos menores */
+  }
+}
+
+@media (min-width: 1200px) {
+  .dashboard-container {
+      width: 80%; /* Limita a largura em telas maiores */
+  }
+}
+
